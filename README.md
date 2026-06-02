@@ -1,6 +1,15 @@
 # Amazing-Hand-Project
 Community documentation and contribution guide for the AmazingHand robotic hand open-source project, focusing on setup, architecture, and system understanding.
 
+## About the AmazingHand System
+
+The AmazingHand is a robotic hand system designed for dexterous manipulation research. It typically includes:
+
+- Multiple servo-driven fingers
+- Embedded control system
+- Serial communication interface
+- Modular mechanical design
+
 ## Overview
 
 The Amazing-Hand-Project is an open-source robotic hand system designed for learning, research, and development in robotics and embedded systems.
@@ -14,6 +23,17 @@ The purpose of this project is to:
 - Break down the Amazing Hand robotic system into understandable components
 - Provide clear documentation for setup and usage
 - Support contributors working on robotics, firmware, and control systems
+
+## Control System Overview
+
+The system is controlled through a software layer that sends commands to embedded controllers, which then actuate the servo motors in each finger.
+
+The control flow typically involves:
+
+- High-level commands (Python or user interface)
+- Communication layer (serial / firmware interface)
+- Embedded controller (microcontroller/firmware)
+- Actuation (servo motors driving fingers)
 
 ## Documentation
 
@@ -30,6 +50,7 @@ If you're new to this project, follow this order:
 
 
 ## Project Structure
+
 Amazing-Hand-Project/
 │
 ├── README.md
