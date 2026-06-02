@@ -20,9 +20,42 @@ The purpose of this project is to:
 - `docs/overview.md` – Project introduction and purpose
 - `docs/architecture.md` – System structure and components
 
+## Getting Started
+
+If you're new to this project, follow this order:
+
+1. Read `docs/overview.md`
+2. Read `docs/architecture.md`
+3. Follow `docs/setup.md`
+
+
+## Project Structure
+Amazing-Hand-Project/
+│
+├── README.md
+├── docs/
+│ ├── overview.md
+│ ├── architecture.md
+│ ├── setup.md
+│ └── features/
+
 ## Contribution
 
-This project is open for improvements. Contributions are welcome once documentation structure is complete.
+This is an open documentation project for the Amazing Hand robotic system.
+
+### How to contribute:
+
+1. Fork the repository
+2. Create a new branch
+3. Make improvements to documentation
+4. Submit a Pull Request
+
+### Types of contributions:
+- Documentation improvements
+- Architecture clarification
+- Setup guide enhancements
+- Feature explanations
+
 
 ## Status
 
