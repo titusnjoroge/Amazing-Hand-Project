@@ -33,30 +33,54 @@ The software layer translates user commands into motor instructions.
 
 ---
 
-## 3. Control Flow
+## 3. System Input Layer
 
-The system follows a hierarchical control structure:
+The system can receive commands from different input sources such as:
 
-User Input → Python Controller → Serial Communication → Microcontroller → Servo Motors → Finger Movement
+- User interfaces (GUI or web applications)
+- Predefined motion scripts
+- API calls (future extension)
 
-### Visual Flow
+These inputs define the desired finger positions or gestures.
 
-```text
+## 4. Control Flow
+
+The system follows a layered control pipeline:
+
 User Input
     ↓
-Python Controller
+Command Interface (GUI / Script / API)
     ↓
-Serial Communication
+Control Logic (Python Controller)
     ↓
-Microcontroller (Arduino/Firmware)
+Communication Layer (Serial / USB / ROS)
     ↓
-Servo Motors
+Embedded Firmware (Microcontroller)
     ↓
-Fingers Move
-```
+PWM Signal Generation
+    ↓
+Servo Actuation
+    ↓
+Mechanical Finger Movement
 
 ---
 
-## 4. System Summary
+## 5. Firmware Responsibilities
 
-The AmazingHand architecture is designed to separate control logic from physical actuation, making the system modular, scalable, and easier to maintain.
+The embedded firmware (e.g., Arduino-based system) is responsible for:
+
+- Receiving control signals from the software layer
+- Interpreting movement commands
+- Generating PWM signals for servos
+- Managing timing and synchronization of finger movements
+
+
+## 6. System Summary
+
+The AmazingHand architecture separates the system into three main layers:
+
+- Input Layer → defines user intent
+- Control Layer → processes and translates commands
+- Hardware Layer → executes physical movement
+
+This modular design allows for scalability, maintainability, and future integration of advanced robotics features such as feedback control and autonomous motion planning.
