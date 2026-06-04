@@ -31,6 +31,7 @@ The AmazingHand system is composed of:
 ---
 
 ## System Architecture
+```bash
 User Input
 ↓
 Command Interface (GUI / Script / API)
@@ -49,7 +50,7 @@ Tendon Mechanics
 ↓
 Finger Movement
 
-
+```
 ---
 
 ##  Repository Structure
