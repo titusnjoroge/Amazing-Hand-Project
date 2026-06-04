@@ -1,138 +1,169 @@
-# Calibration System — AmazingHand
+# Calibration System — AmazingHand (ENGINEERING VERSION)
 
-The calibration system defines how the AmazingHand robotic system establishes consistent, repeatable, and safe motion across all actuators (servos) and tendon-driven fingers.
-
-This is critical because servo-based tendon systems drift over time and require initialization alignment.
-
----
-
-## 1. Purpose of Calibration
-
-Calibration ensures:
-
-- Each servo starts from a known zero position
-- Finger joints align with mechanical limits
-- Tendon tension is balanced
-- Motion commands produce predictable results
-- Hardware safety is maintained during startup
+## OBJECTIVE
+Combine conceptual + implementation calibration documentation into one unified, precise, hardware-ready engineering spec for a tendon-driven servo robotic hand.
 
 ---
 
-## 2. Calibration Types
+## OUTPUT REQUIREMENTS
 
-### 2.1 Servo Neutral Calibration
-
-Each servo is assigned a neutral (center) position:
-
-- Typically 90° for standard hobby servos
-- May vary depending on mechanical setup
-- Used as reference “home position”
+Produce a structured engineering document with the following sections:
 
 ---
 
-### 2.2 Finger Zero Position Calibration
-
-Each finger must be aligned to its:
-
-- Fully extended position (open hand state)
-- Or mechanically defined home stop
-
-This ensures consistency across all fingers.
+### 1. Purpose
+Explain why calibration is required in tendon-driven servo systems:
+- drift compensation
+- repeatable motion
+- safety assurance
+- initialization consistency
 
 ---
 
-### 2.3 Tendon Tension Calibration
-
-For tendon-driven systems:
-
-- Ensure equal tension across flexor cables
-- Avoid slack that causes motion delay
-- Avoid over-tension that strains motors
-
----
-
-### 2.4 Joint Limit Calibration
-
-Each joint is restricted to safe movement bounds:
-
-- Minimum angle (fully extended)
-- Maximum angle (fully flexed)
-- Firmware enforces these limits
+### 2. Calibration System Overview
+Describe system-wide calibration logic:
+- servo initialization
+- tendon alignment
+- joint limit enforcement
+- neutral position definition
 
 ---
 
-## 3. Servo Mapping Table (Logical Model)
+### 3. Servo Neutral Calibration (CORE TABLE)
 
-| Finger  | Joint        | Servo Index | Function |
-|----------|-------------|-------------|----------|
-| Thumb    | Base        | S1          | Opposition / rotation |
-| Thumb    | Flexion     | S2          | Bend thumb |
-| Index    | Flexion     | S3          | Primary grasp |
-| Middle   | Flexion     | S4          | Stability support |
-| Ring     | Flexion     | S5          | Grip reinforcement |
-| Pinky    | Flexion     | S6          | Fine stability |
+Create a unified table:
 
-> NOTE: Actual servo mapping must be verified in hardware implementation.
+Servo ID | Finger | Neutral Position (°)
+
+Must include:
+S1–S6 system
+All servos default ~90° unless otherwise specified
 
 ---
 
-## 4. Calibration Procedure (Startup Sequence)
+### 4. Calibration Types
 
-### Step 1 — Power Initialization
-- Ensure stable 5–6V power supply
-- Avoid load on fingers during startup
+Include and merge both documents:
 
-### Step 2 — Servo Reset
-- Move all servos to neutral (90° or defined center)
-- Hold for stabilization
+- Servo neutral calibration
+- Finger zero position calibration
+- Tendon tension calibration
+- Joint limit calibration
+- Offset calibration
 
-### Step 3 — Finger Extension Alignment
-- Move all fingers to fully open position
-- Confirm mechanical symmetry
-
-### Step 4 — Save Zero Offsets
-- Store calibration offsets in firmware memory (EEPROM or config file)
-
-### Step 5 — Test Motion Sweep
-- Slowly flex and extend each finger
-- Ensure no mechanical obstruction
+Explain each in engineering terms (no repetition).
 
 ---
 
-## 5. Calibration Data Storage
+### 5. Calibration Order (CRITICAL SEQUENCE)
 
-Calibration values are stored in:
+Define strict startup order:
 
-- Firmware EEPROM (preferred)
-- Configuration file (Python/ROS systems)
-- Hardcoded fallback values (not recommended)
+1. Thumb (S1, S2)
+2. Index (S3)
+3. Middle (S4)
+4. Ring (S5)
+5. Pinky (S6)
 
----
-
-## 6. Safety Constraints During Calibration
-
-- Never exceed servo physical limits
-- Avoid sudden full-speed movements
-- Always calibrate without external load
-- Stop immediately if jitter or strain is observed
+Explain why order matters:
+- tendon tension balance
+- mechanical alignment stability
 
 ---
 
-## 7. Future Improvements
+### 6. Calibration Procedure (STARTUP FLOW)
 
-- Auto-calibration using position sensors
-- Force-based calibration correction
-- Real-time drift compensation
-- Machine learning-based motion tuning
+Combine both procedures into one clean sequence:
+
+- Power initialization
+- Servo neutral reset
+- Tendon attachment / alignment
+- Finger extension alignment
+- Offset tuning
+- Motion sweep test
+- Save calibration data
+
+Must be step-by-step and unambiguous.
 
 ---
 
-## 8. Summary
+### 7. Offset Management System
 
-Calibration ensures that the AmazingHand behaves consistently across:
+Define how offsets are stored and used:
+- firmware constants
+- JSON config
+- EEPROM (future)
 
-- Power cycles
-- Motion commands
-- Different environments
+Include example:
+S1_offset, S2_offset, etc.
 
-Without calibration, tendon-driven robotic systems lose precision and repeatability.
+---
+
+### 8. Safe Operating Limits
+
+Define unified safety constraints:
+
+Servo range:
+- Min: 10°
+- Max: 170°
+
+Rules:
+- clamp in firmware
+- avoid abrupt motion
+- prevent overload during calibration
+
+---
+
+### 9. Calibration Data Storage
+
+Specify storage locations:
+- firmware EEPROM
+- config files
+- fallback defaults
+
+Emphasize persistence across power cycles.
+
+---
+
+### 10. System Constraints / Limitations
+
+Merge both docs:
+- tendon elasticity drift
+- servo mechanical variation
+- temperature effects
+- lack of automatic feedback (if applicable)
+
+---
+
+### 11. Safety Constraints
+
+Must include:
+- no load during calibration
+- avoid over-tension
+- stop on jitter or strain
+- gradual motion requirement
+
+---
+
+### 12. Future Improvements
+
+Include:
+- auto-calibration with sensors
+- force feedback integration
+- drift compensation algorithms
+- machine learning tuning
+
+---
+
+### 13. Summary
+
+Short engineering conclusion:
+Calibration ensures repeatable, safe, and predictable operation of the AmazingHand across power cycles and mechanical variations.
+
+---
+
+
+## RULES
+- Keep S1–S6 servo system unchanged
+- Remove redundancy
+- Merge overlapping concepts cleanly
