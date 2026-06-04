@@ -1,72 +1,82 @@
-# Hardware Architecture — AmazingHand
+#  HARDWARE SYSTEM — AmazingHand
 
-## 1. System Overview
+## Overview
 
-The AmazingHand is a robotic hand system designed for dexterous manipulation using servo-driven actuation and a modular mechanical structure.
+The AmazingHand is a tendon-driven robotic hand composed of:
+
+- 3D printed mechanical structure
+- Servo-based actuation system
+- Tendon routing mechanism
+- Embedded microcontroller system
+- External power regulation system
 
 ---
 
-## 2. Mechanical Structure
+##  1. Mechanical Structure
 
-The system consists of:
-
-- 3D printed finger segments (phalanges)
+### Components:
+- 3D printed phalanges (finger bones)
 - Palm housing structure
-- Joint connectors for finger articulation
-- Tendon routing channels (if tendon-driven)
+- Joint connectors (pin-based or flexible joints)
+- Tendon channels embedded in fingers
 
-Each finger is composed of multiple joints to enable human-like motion.
-
----
-
-## 3. Actuation System
-
-The hand is driven by multiple servo motors.
-
-### Key characteristics:
-- One or more servos per finger
-- Servo-driven joint actuation
-- Movement controlled via PWM signals
-- Likely tendon-driven transmission system
+### Design Characteristics:
+- Modular finger design
+- Lightweight PLA/ABS structure
+- Replaceable finger segments
 
 ---
 
-## 4. Transmission System
+##  2. Actuation System
 
-Motion is transmitted through:
+### Likely configuration:
+- Micro servo motors (one or more per finger)
+- Servo horn connected to tendon line
+- Pull-based actuation (flexion)
+- Elastic return mechanism (extension)
 
-- Tendons (cables) OR direct linkages
-- Elastic return mechanisms (springs or rubber bands)
-- Guide channels within printed parts
-
-This allows flexible finger movement while keeping motors outside the finger structure.
-
----
-
-## 5. Electronics
-
-The electronic system includes:
-
-- Microcontroller (Arduino / STM32 class device)
-- Servo driver system (PWM control)
-- External power supply (5–6V high current)
+### Behavior:
+- Servo rotation → tendon pull → finger flexion
+- Release tension → elastic return → finger extension
 
 ---
 
-## 6. Power System
+##  3. Transmission System
 
-- Servo motors require high current supply
-- Logic system powered separately from actuators
-- Voltage regulation required for stability
+- Nylon or steel tendons
+- Low-friction routing through finger channels
+- Anchored at distal phalanx
+- Controlled via servo spool rotation
 
 ---
 
-## 7. System Summary
+## 4. Electronics System
 
-The hardware architecture separates:
+### Core components:
+- Microcontroller (Arduino-class: Arduino Nano)
+- Servo driver circuit (PWM control):PDI-1109HB-CLASS MICRO SERVO
+- External 5V–6V power supply
+- Ground shared between logic and actuators
 
-- Mechanical structure (movement)
-- Actuation system (force generation)
-- Electronics (control interface)
+---
 
-This modular design improves maintainability and scalability.
+##  5. Power System
+
+- High current 5V supply for servos
+- Separate logic power (USB or regulated line)
+- Common ground for stability
+
+---
+
+## 6. Key Design Principle
+
+The system converts:
+
+Electrical PWM signals → Servo rotation → Tendon motion → Finger movement
+
+---
+
+## 7. Notes  
+- Actuation count per finger may vary (1–3 DOF typical)  
+- Calibration system is defined separately in `calibration.md`
+EOF
