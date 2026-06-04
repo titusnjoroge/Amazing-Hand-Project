@@ -5,7 +5,7 @@ This repository breaks down the hardware, software, control flow, calibration, a
 
 ---
 
-## 🧠 Project Purpose
+##  Project Purpose
 
 The goal of this project is to:
 
@@ -17,7 +17,7 @@ The goal of this project is to:
 
 ---
 
-## 🤖 System Overview
+## System Overview
 
 The AmazingHand system is composed of:
 
@@ -30,7 +30,7 @@ The AmazingHand system is composed of:
 
 ---
 
-## ⚙️ System Architecture
+## System Architecture
 User Input
 ↓
 Command Interface (GUI / Script / API)
@@ -52,7 +52,7 @@ Finger Movement
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```bash
 
@@ -92,7 +92,7 @@ The system is divided into:
 
 ---
 
-## 🧪 Calibration System
+## Calibration System
 
 The system requires calibration for:
 
@@ -105,7 +105,7 @@ Without calibration, motion becomes inconsistent or inaccurate.
 
 ---
 
-## 🖐 Finger Model (Summary)
+##  Finger Model (Summary)
 
 Each finger is mapped to one or more servos:
 
@@ -119,7 +119,7 @@ Each joint is driven by a servo-to-tendon mapping system.
 
 ---
 
-## 🔌 Communication
+##  Communication
 
 - Protocol: Serial (USB/UART)
 - Data format: structured command packets
@@ -127,7 +127,7 @@ Each joint is driven by a servo-to-tendon mapping system.
 
 ---
 
-## 🚧 Current Limitations
+##  Current Limitations
 
 - No sensor feedback (open-loop system)
 - No force sensing
@@ -136,7 +136,7 @@ Each joint is driven by a servo-to-tendon mapping system.
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Closed-loop control system
 - Force/position sensors
@@ -146,7 +146,7 @@ Each joint is driven by a servo-to-tendon mapping system.
 
 ---
 
-## 📊 System Summary
+##  System Summary
 
 This project represents a **modular tendon-driven robotic hand architecture**, designed for research, learning, and future robotic development.
 
@@ -159,7 +159,7 @@ It separates:
 
 ---
 
-## 🤝 Contribution Goals
+##  Contribution Goals
 
 Future improvements may include:
 
@@ -171,7 +171,7 @@ Future improvements may include:
 
 ---
 
-## 📌 Status
+##  Status
 
 This is an active robotics documentation project under continuous refinement and validation.
 
