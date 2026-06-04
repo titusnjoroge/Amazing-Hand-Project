@@ -1,128 +1,124 @@
-# Finger Model — AmazingHand
+# Finger Model — AmazingHand (ENGINEERING VERSION)
 
-This document defines the mechanical structure, actuation mapping, and kinematic behavior of each finger in the AmazingHand robotic system.
-
-It focuses on tendon routing, servo assignment, and degrees of freedom (DOF).
-
----
-
-## 1. System Overview
-
-The AmazingHand uses a tendon-driven actuation system, where:
-
-- Servo motors pull tendons  
-- Tendons flex finger joints  
-- Elastic elements or passive forces return fingers to neutral  
-
-This allows lightweight fingers with remote actuation.
+## OBJECTIVE
+Merge the conceptual documentation and engineering version into ONE clean, consistent, implementation-ready mechanical + control system specification.
 
 ---
 
-## 2. Global Finger Architecture
+## OUTPUT REQUIREMENTS
 
-Each finger typically consists of:
+You must produce a structured engineering document with:
 
-- Proximal phalanx (base segment)  
-- Middle phalanx  
-- Distal phalanx  
-- Tendon routing channel  
-- One or more tendons (flexor system)
+### 1. Purpose
+Define system-level function:
+Servo → Tendon → Joint → Motion chain mapping
 
 ---
 
-## 3. Degrees of Freedom (DOF)
-
-| Finger | DOF | Notes |
-|--------|-----|------|
-| Thumb  | 3–4 | Most complex (opposition + rotation) |
-| Index  | 2–3 | Precision grasp |
-| Middle | 2   | Stability support |
-| Ring   | 2   | Coupled motion common |
-| Pinky  | 2   | Reduced actuation |
+### 2. System Overview
+Include tendon-driven actuation explanation:
+- Servo motors pull tendons
+- Tendons flex finger joints
+- Elastic or passive return system
 
 ---
 
-## 4. Servo-to-Finger Mapping (Conceptual Model)
-
-> NOTE: Exact servo IDs depend on hardware configuration.
-
-| Servo | Controls | Function |
-|------|----------|----------|
-| S1 | Thumb flexion | Main tendon pull |
-| S2 | Thumb opposition | Lateral movement |
-| S3 | Index flexion | Grip control |
-| S4 | Middle flexion | Support motion |
-| S5 | Ring flexion | Coupled actuation |
-| S6 | Pinky flexion | Stability assist |
+### 3. Finger Architecture
+Describe each finger structure:
+- MCP / IP joints
+- Phalanges (proximal, middle, distal)
+- Tendon routing channel
+- Flexor tendon system
 
 ---
 
-## 5. Tendon Routing Model
+### 4. Servo Mapping Table (CORE SYSTEM)
+Combine and standardize both versions into ONE table:
 
-Each tendon follows this path:
+Columns:
+Finger | Joint | Servo ID | Range (degrees)
 
-Servo spool → guide channel → finger entry point → phalanx routing → distal anchor
-
-### Key properties:
-- Low friction routing is critical  
-- Tendon tension must be balanced  
-- Elastic return or spring assist used for extension  
-
----
-
-## 6. Thumb Kinematics (Critical Section)
-
-The thumb is biomechanically different from other fingers.
-
-It includes:
-
-- Flexion/extension  
-- Abduction/adduction  
-- Opposition movement  
-
-### Functional behavior:
-- Enables pinch grasp  
-- Enables power grasp  
-- Requires multi-axis actuation  
+Must include:
+- Thumb (S1, S2 special handling if needed)
+- Index (S3)
+- Middle (S4)
+- Ring (S5)
+- Pinky (S6)
 
 ---
 
-## 7. Motion Behavior Model
-
-Finger movement follows this chain:
-
-Servo rotation  
-→ tendon pull force  
-→ joint torque generation  
-→ phalanx rotation  
-→ fingertip displacement  
+### 5. Degrees of Freedom (DOF)
+List DOF per finger clearly:
+- Thumb: 2–4 DOF (explain complexity briefly)
+- Others: 2 DOF standard
+Include explanation of coupled motion where relevant.
 
 ---
 
-## 8. Calibration Considerations
+### 6. Tendon Routing Model
+Standardize into a single engineering path:
 
-Each finger requires calibration for:
+Servo spool → guide tube → finger channel → phalanx routing → distal anchor
 
-- Neutral position (0° reference)  
-- Maximum flexion limit  
-- Tendon slack compensation  
-- Servo offset correction  
-
----
-
-## 9. System Limitations
-
-- No direct force feedback (open-loop system)  
-- Tendon elasticity introduces minor error  
-- Servo precision limits fine control accuracy  
+Include rules:
+- minimize friction
+- maintain tension balance
+- elastic return / spring assist
 
 ---
 
-## 10. Future Improvements
+### 7. Motion Chain (Kinematics)
+Define full conversion chain:
 
-- Add force sensors in fingertips  
-- Add position encoders  
-- Implement closed-loop control  
-- Improve thumb opposability mechanism  
-- Add adaptive grip control  
-EOF
+Servo rotation → tendon force → joint torque → finger flexion
+
+---
+
+### 8. Thumb Kinematics (Critical Section)
+Explain thumb separately:
+- flexion/extension
+- abduction/adduction
+- opposition
+- role in pinch and power grasp
+
+---
+
+### 9. Calibration Dependency
+State dependency on external file:
+
+calibration.md
+
+Include:
+- zero position calibration
+- offset correction
+- movement limits
+- slack compensation
+
+---
+
+### 10. System Limitations
+Merge both documents:
+- open-loop control (no force feedback)
+- tendon elasticity error
+- servo precision limits
+
+---
+
+### 11. Future Improvements
+Include:
+- force sensing (optional future)
+- encoders
+- closed-loop control
+- improved thumb opposability
+- adaptive grip control
+
+---
+
+
+## RULES
+- Do NOT add new hardware components not implied
+- Keep servo system limited to S1–S6
+- Maintain engineering tone only
+- Remove repetition
+- Improve clarity and structure
+- Ensure consistency across both documents
