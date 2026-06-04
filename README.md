@@ -54,7 +54,7 @@ Finger Movement
 
 ## 📁 Repository Structure
 
-
+```bash
 
 docs/
 ├── architecture.md → System design overview
@@ -68,7 +68,7 @@ docs/
 ├── setup.md → Setup guide
 └── overview.md → High-level summary
 
-
+```
 ---
 
 ## 🔩 Key Engineering Concepts
