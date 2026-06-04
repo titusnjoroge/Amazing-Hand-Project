@@ -1,140 +1,123 @@
-# System Architecture
+# System Architecture — AmazingHand
 
-The AmazingHand system is a multi-layer robotic control system that integrates mechanical, electronic, and software components.
+The AmazingHand system is a multi-layer robotic hand architecture integrating mechanical, electronic, firmware, and software systems into a unified control pipeline.
 
 ---
 
 ## 1. Hardware Layer
 
-This layer represents the physical structure of the robotic hand.
+This layer represents the physical robotic structure.
 
-It includes:
+### Components:
+- Servo motors (actuators)
+- 3D-printed finger segments (phalanges)
+- Tendon routing system (cables or strings)
+- Mechanical joints (pin or flexible joints)
+- Palm housing structure
 
-- Servo motors (for finger movement)
-- Finger linkage mechanisms
-- Mechanical joints
-- Mounting structure
-
-These components are responsible for converting electrical signals into physical movement.
+### Function:
+Converts electrical motor commands into physical finger movement.
 
 ---
 
 ## 2. Software Layer
 
-This layer handles control logic and command processing.
+This layer defines high-level control logic.
 
-It typically includes:
+### Components:
+- Python control scripts / API layer
+- Motion planning logic
+- Optional GUI or external interface
+- Serial communication handler
 
-- Python control scripts or API
-- Arduino / embedded firmware
-- Serial communication interfaces
-
-The software layer translates user commands into motor instructions.
-
----
-
-## 3. System Input Layer
-
-The system can receive commands from different input sources such as:
-
-- User interfaces (GUI or web applications)
-- Predefined motion scripts
-- API calls (future extension)
-
-These inputs define the desired finger positions or gestures.
-
-## 4. Control Flow
-
-The system follows a layered control pipeline:
-
-User Input
-    ↓
-Command Interface (GUI / Script / API)
-    ↓
-Control Logic (Python Controller)
-    ↓
-Communication Layer (Serial / USB / ROS)
-    ↓
-Embedded Firmware (Microcontroller)
-    ↓
-PWM Signal Generation
-    ↓
-Servo Actuation
-    ↓
-Mechanical Finger Movement
+### Function:
+Transforms user intent into structured motor commands.
 
 ---
 
-## 5. Firmware Responsibilities
+## 3. Communication Layer
 
+Acts as a bridge between software and hardware.
 
-The embedded firmware (e.g., Arduino-based system) is responsible for:
+### Protocols:
+- Serial (USB/UART)
+- Optional ROS integration (future)
+- Packet-based command structure
 
-- Receiving control signals from the software layer
-- Interpreting movement commands
-- Generating PWM signals for servos
-- Managing timing and synchronization of finger movements
+### Function:
+Ensures reliable transmission of movement commands to firmware.
 
+---
 
-## 6. System Summary
+## 4. Firmware Layer
 
-The AmazingHand architecture separates the system into three main layers:
+Runs on microcontroller (Arduino / STM32-class device).
 
-- Input Layer → defines user intent
-- Control Layer → processes and translates commands
-- Hardware Layer → executes physical movement
+### Responsibilities:
+- Receive commands from software
+- Parse motion instructions
+- Generate PWM signals
+- Manage timing and synchronization
+- Enforce safe servo limits
 
-This modular design allows for scalability, maintainability, and future integration of advanced robotics features such as feedback control and autonomous motion planning.
+---
 
+## 5. Control Flow (SYSTEM PIPELINE)
 
-The embedded firmware (e.g., Arduino-based system) is responsible for:
+The full system operates as a hierarchical pipeline:
 
-- Receiving control signals from the software layer
-- Interpreting movement commands
-- Generating PWM signals for servos
-- Managing timing and synchronization of finger movements
+User Input  
+→ Command Interface (GUI / Script / API)  
+→ Python Controller  
+→ Serial Communication Layer  
+→ Microcontroller Firmware  
+→ PWM Signal Generation  
+→ Servo Actuation  
+→ Tendon Pulling Mechanism  
+→ Finger Movement  
 
+---
 
-## 6. System Summary
+## 6. Hardware–Software Mapping
 
-The AmazingHand architecture separates the system into three main layers:
+Each software command maps directly to hardware actions:
 
-- Input Layer → defines user intent
-- Control Layer → processes and translates commands
-- Hardware Layer → executes physical movement
+- Finger commands → individual servo motors
+- Gesture commands → predefined motion sequences
+- Position values → PWM duty cycles
+- High-level API calls → multi-finger coordination
 
-This modular design allows for scalability, maintainability, and future integration of advanced robotics features such as feedback control and autonomous motion planning.
+---
 
 ## 7. Feedback and Future Extensions
 
-The current system is primarily open-loop, meaning it executes commands without real-time feedback.
+Currently, the system is open-loop (no sensing feedback).
 
-Future improvements may include:
-
+Future upgrades may include:
 - Finger position sensors
 - Force feedback sensors
-- Closed-loop control for precision movement
-- Calibration systems for consistent motion accuracy
+- Closed-loop PID control
+- Auto-calibration system
 
-This would allow the system to correct errors during movement.
+---
 
-## 8. Hardware–Software Mapping
+## 8. Safety System
 
-Each software command corresponds to a specific hardware action:
+To prevent hardware damage:
 
-- Finger commands → mapped to individual servo motors
-- Gesture commands → mapped to predefined motion sequences
-- Control signals → translated into PWM values for each actuator
+- Servo angle limits enforced in firmware
+- Power regulation required for stability
+- Command filtering for sudden spikes
+- Emergency stop mechanism (future feature)
 
+---
 
-This mapping ensures that high-level commands are converted into precise physical movements.
+## 9. System Summary
 
+The AmazingHand architecture is divided into:
 
-## 9. Safety and System Limits
+- Input Layer → user intent
+- Control Layer → command processing
+- Hardware Layer → physical execution
 
-To ensure safe operation of the robotic system:
-
-- Servo limits must not be exceeded to prevent mechanical damage
-- Sudden command spikes should be filtered by firmware
-- Power supply must be stable to avoid system resets
-- Emergency stop mechanisms may be implemented in future versions
+This separation enables modular design, scalability, and future robotic intelligence upgrades.
