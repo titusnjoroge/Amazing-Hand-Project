@@ -1,6 +1,6 @@
 # Amazing-Hand-Project
 
-A structured robotics documentation and system model for the **AmazingHand tendon-driven robotic hand system**.  
+A structured robotics documentation and system model for the **AmazingHand tendon-driven robotic hand system**.  That I have been assigned by the company that I am currently an intern at ZeroBionic Africa.
 This repository breaks down the hardware, software, control flow, calibration, and finger-level kinematics into a clear engineering model.
 
 ---
