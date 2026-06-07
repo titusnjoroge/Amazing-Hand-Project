@@ -74,7 +74,7 @@ docs/
 
 ## 🔩 Key Engineering Concepts
 
-### 1. Tendon-Driven Actuation
+### 1. Tendon-Driven Actuation Me hanics
 Fingers are moved using cable/tendon routing connected to servo motors.
 
 ### 2. Open-Loop Control
