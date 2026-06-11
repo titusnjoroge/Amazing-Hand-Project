@@ -1,7 +1,8 @@
 # Amazing-Hand-Project
 
-![Uploading image.png…]()
+<img width="1179" height="1687" alt="image" src="https://github.com/user-attachments/assets/0e7a50b9-23f6-4c26-8e87-25d544c5fea0" />
 
+![Uploading image.png…]()
 
 ## Overview
 
