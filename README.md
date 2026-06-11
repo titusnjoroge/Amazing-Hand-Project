@@ -94,6 +94,26 @@ docs/
 The system is operational at a prototype level and ready for controlled demonstration and further optimization.
 ---
 
+## Demo Instructions
+
+To operate the robotic hand:
+
+1. Power on the servo control system
+2. Connect controller via USB
+3. Launch control script (Python or firmware interface)
+4. Initialize calibration routine
+5. Execute predefined gestures:
+   - Open hand
+   - Close hand (grasp)
+   - Point gesture
+   - Pinch grip
+
+## Expected Behavior
+
+- Smooth finger actuation
+- Synchronized servo response
+- Repeatable grasp motions
+- Stable calibration across cycles
 ## Future Work
 
 * Closed-loop control
