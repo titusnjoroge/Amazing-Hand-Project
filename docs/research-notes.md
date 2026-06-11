@@ -45,7 +45,7 @@ This section defines the areas of technical exploration.
 ### 1. Hardware Analysis
 - Servo motors used in the system
 - Number of actuators and degrees of freedom
-- Mechanical design (tendons, joints, structure)
+- Mechanical design (TBD_linkage_systems, joints, structure)
 - Electronics and microcontroller board
 - Power requirements and wiring layout
 

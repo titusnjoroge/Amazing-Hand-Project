@@ -11,7 +11,7 @@ This layer represents the physical robotic structure.
 ### Components:
 - Servo motors (actuators)
 - 3D-printed finger segments (phalanges)
-- Tendon routing system (cables or strings)
+- TBD_linkage_system routing system (cables or strings)
 - Mechanical joints (pin or flexible joints)
 - Palm housing structure
 
@@ -73,7 +73,7 @@ User Input
 → Microcontroller Firmware  
 → PWM Signal Generation  
 → Servo Actuation  
-→ Tendon Pulling Mechanism  
+→ TBD_linkage_system Pulling Mechanism  
 → Finger Movement  
 
 ---

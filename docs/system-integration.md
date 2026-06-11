@@ -8,7 +8,7 @@ This document connects all subsystems of the AmazingHand into a unified robotics
 
 The system is composed of:
 
-- Hardware Layer (fingers, tendons, servos)
+- Hardware Layer (fingers, TBD_linkage_systems, servos)
 - Software Layer (Python control logic)
 - Communication Layer (Serial / ROS / USB)
 - Firmware Layer (microcontroller PWM control)
@@ -24,7 +24,7 @@ User Intent
 → Communication Layer  
 → Firmware Execution  
 → Servo Actuation  
-→ Tendon Mechanics  
+→ Servo Actuation Mechanics  
 → Finger Movement  
 
 ---
@@ -44,7 +44,7 @@ The system follows a **separation of concerns architecture**:
 
 - Servos are PWM-controlled
 - Communication is serial-based
-- Tendons introduce non-linear motion behavior
+- TBD_linkage_systems introduce non-linear motion behavior
 - No active force feedback is currently implemented
 
 ---
@@ -84,4 +84,4 @@ Current system limitations:
 
 ## 8. Engineering Summary
 
-This system is a classical tendon-driven robotic hand architecture using layered software-hardware separation and PWM-based actuation.
+This system is a classical servo-actuated robotic hand architecture using layered software-hardware separation and PWM-based actuation.

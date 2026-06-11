@@ -2,11 +2,11 @@
 
 ## Overview
 
-The AmazingHand is a tendon-driven robotic hand composed of:
+The AmazingHand is a servo-actuated robotic hand composed of:
 
 - 3D printed mechanical structure
 - Servo-based actuation system
-- Tendon routing mechanism
+- TBD_linkage_system routing mechanism
 - Embedded microcontroller system
 - External power regulation system
 
@@ -18,7 +18,7 @@ The AmazingHand is a tendon-driven robotic hand composed of:
 - 3D printed phalanges (finger bones)
 - Palm housing structure
 - Joint connectors (pin-based or flexible joints)
-- Tendon channels embedded in fingers
+- TBD_linkage_system channels embedded in fingers
 
 ### Design Characteristics:
 - Modular finger design
@@ -31,19 +31,19 @@ The AmazingHand is a tendon-driven robotic hand composed of:
 
 ### Likely configuration:
 - Micro servo motors (one or more per finger)
-- Servo horn connected to tendon line
+- Servo horn connected to TBD_linkage_system line
 - Pull-based actuation (flexion)
 - Elastic return mechanism (extension)
 
 ### Behavior:
-- Servo rotation → tendon pull → finger flexion
+- Servo rotation → TBD_linkage_system pull → finger flexion
 - Release tension → elastic return → finger extension
 
 ---
 
 ##  3. Transmission System
 
-- Nylon or steel tendons
+- Nylon or steel TBD_linkage_systems
 - Low-friction routing through finger channels
 - Anchored at distal phalanx
 - Controlled via servo spool rotation
@@ -72,7 +72,7 @@ The AmazingHand is a tendon-driven robotic hand composed of:
 
 The system converts:
 
-Electrical PWM signals → Servo rotation → Tendon motion → Finger movement
+Electrical PWM signals → Servo rotation → TBD_linkage_system motion → Finger movement
 
 ---
 

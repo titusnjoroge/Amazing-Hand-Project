@@ -1,7 +1,7 @@
 # Calibration System — AmazingHand (ENGINEERING VERSION)
 
 ## OBJECTIVE
-Combine conceptual + implementation calibration documentation into one unified, precise, hardware-ready engineering spec for a tendon-driven servo robotic hand.
+Combine conceptual + implementation calibration documentation into one unified, precise, hardware-ready engineering spec for a servo-actuated servo robotic hand.
 
 ---
 
@@ -12,7 +12,7 @@ Produce a structured engineering document with the following sections:
 ---
 
 ### 1. Purpose
-Explain why calibration is required in tendon-driven servo systems:
+Explain why calibration is required in servo-actuated servo systems:
 - drift compensation
 - repeatable motion
 - safety assurance
@@ -23,7 +23,7 @@ Explain why calibration is required in tendon-driven servo systems:
 ### 2. Calibration System Overview
 Describe system-wide calibration logic:
 - servo initialization
-- tendon alignment
+- TBD_linkage_system alignment
 - joint limit enforcement
 - neutral position definition
 
@@ -47,7 +47,7 @@ Include and merge both documents:
 
 - Servo neutral calibration
 - Finger zero position calibration
-- Tendon tension calibration
+- TBD_linkage_system tension calibration
 - Joint limit calibration
 - Offset calibration
 
@@ -66,7 +66,7 @@ Define strict startup order:
 5. Pinky (S6)
 
 Explain why order matters:
-- tendon tension balance
+- TBD_linkage_system tension balance
 - mechanical alignment stability
 
 ---
@@ -77,7 +77,7 @@ Combine both procedures into one clean sequence:
 
 - Power initialization
 - Servo neutral reset
-- Tendon attachment / alignment
+- TBD_linkage_system attachment / alignment
 - Finger extension alignment
 - Offset tuning
 - Motion sweep test
@@ -128,7 +128,7 @@ Emphasize persistence across power cycles.
 ### 10. System Constraints / Limitations
 
 Merge both docs:
-- tendon elasticity drift
+- TBD_linkage_system elasticity drift
 - servo mechanical variation
 - temperature effects
 - lack of automatic feedback (if applicable)

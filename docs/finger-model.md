@@ -11,14 +11,14 @@ You must produce a structured engineering document with:
 
 ### 1. Purpose
 Define system-level function:
-Servo → Tendon → Joint → Motion chain mapping
+Servo → TBD_linkage_system → Joint → Motion chain mapping
 
 ---
 
 ### 2. System Overview
-Include tendon-driven actuation explanation:
-- Servo motors pull tendons
-- Tendons flex finger joints
+Include servo-actuated actuation explanation:
+- Servo motors pull TBD_linkage_systems
+- TBD_linkage_systems flex finger joints
 - Elastic or passive return system
 
 ---
@@ -27,8 +27,8 @@ Include tendon-driven actuation explanation:
 Describe each finger structure:
 - MCP / IP joints
 - Phalanges (proximal, middle, distal)
-- Tendon routing channel
-- Flexor tendon system
+- TBD_linkage_system routing channel
+- Flexor TBD_linkage_system system
 
 ---
 
@@ -55,7 +55,7 @@ Include explanation of coupled motion where relevant.
 
 ---
 
-### 6. Tendon Routing Model
+### 6. TBD_linkage_system Routing Model
 Standardize into a single engineering path:
 
 Servo spool → guide tube → finger channel → phalanx routing → distal anchor
@@ -70,7 +70,7 @@ Include rules:
 ### 7. Motion Chain (Kinematics)
 Define full conversion chain:
 
-Servo rotation → tendon force → joint torque → finger flexion
+Servo rotation → TBD_linkage_system force → joint torque → finger flexion
 
 ---
 
@@ -99,7 +99,7 @@ Include:
 ### 10. System Limitations
 Merge both documents:
 - open-loop control (no force feedback)
-- tendon elasticity error
+- TBD_linkage_system elasticity error
 - servo precision limits
 
 ---

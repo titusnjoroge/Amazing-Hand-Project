@@ -18,7 +18,7 @@ User Input
 → Microcontroller Firmware  
 → PWM Signal Generation  
 → Servo Actuation  
-→ Tendon / Linkage System  
+→ TBD_linkage_system / Linkage System  
 → Finger Movement  
 
 ---
@@ -109,13 +109,13 @@ This is the physical execution stage.
 Components:
 
 - Servo motors
-- Tendon cables or linkages
+- TBD_linkage_system cables or linkages
 - Joint structures
 
 Responsibilities:
 
 - Convert PWM → angular motion
-- Apply force to tendons
+- Apply force to TBD_linkage_systems
 - Move finger joints
 
 **Output:** Mechanical finger motion
