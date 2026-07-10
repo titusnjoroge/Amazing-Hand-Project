@@ -11,6 +11,9 @@ Developed during an internship at ZeroBionic Africa, this project documents the 
 
 ---
 
+
+
+
 ## Project Objectives
 
 * Reconstruct and analyze the AmazingHand platform.
