@@ -59,7 +59,7 @@ docs/
 * Calibration workflows
 * System integration
 
-### Testings
+### Testing
 
 * Mechanical validation
 * Servo verification
