@@ -9,6 +9,8 @@ Amazing-Hand-Project is a complete engineering documentation package for the rec
 
 Developed during an internship at ZeroBionic Africa, this project documents the mechanical architecture, control systems, calibration methodology, integration workflow, testing procedures, and deployment process required to build and operate a robotic hand system.
 
+
+
 ---
 
 
@@ -23,6 +25,9 @@ Developed during an internship at ZeroBionic Africa, this project documents the 
 * Provide a foundation for future robotic hand development.
 
 ---
+
+
+
 
 ## Repository Structure
 
@@ -118,6 +123,9 @@ To operate the robotic hand:
 - Synchronized servo response
 - Repeatable grasp motions
 - Stable calibration across cycles
+
+
+
 ## Future Work
 
 * Closed-loop control
